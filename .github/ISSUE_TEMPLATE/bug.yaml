@@ -3,13 +3,6 @@ description: Track bugs and defects related to the project.
 title: "[BUG]: "
 labels: ["bug", "triage"]
 body:
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: Provide a clear and concise description of the bug.
-    validations:
-      required: true
   - type: dropdown
     id: priority
     attributes:
@@ -30,6 +23,28 @@ body:
         - Large (60+ mins)
     validations:
       required: true
+  - type: dropdown
+    id: targetCompletion
+    attributes:
+      label: Target Completion Date
+      options:
+        - None
+        - Meet 1
+        - Meet 2
+        - Meet 3
+        - Qualifier
+        - State
+        - Worlds
+        - Premere Event
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the bug.
+    validations:
+      required: true
   - type: textarea
     id: steps
     attributes:
@@ -38,19 +53,6 @@ body:
         1. When I do '...'
         2. The robot does '...'
         3. The expected behavior is '...'
-    validations:
-      required: false
-  - type: markdown
-    id: taskList
-    attributes:
-      value: |
-        ---
-        💡 **Tip:** To link sub-tasks to this issue, use a tasklist block:
-        ```
-        ```tasklist
-        - [ ] organization-name/repo#issue_number
-        ```
-        ```
     validations:
       required: false
   

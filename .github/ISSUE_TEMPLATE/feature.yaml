@@ -3,13 +3,6 @@ description: Track new features and improvements related to the project.
 title: "[FEATURE]: "
 labels: ["feature", "triage"]
 body:
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: Provide a clear and concise description of the feature.
-    validations:
-      required: true
   - type: dropdown
     id: priority
     attributes:
@@ -30,16 +23,25 @@ body:
         - Large (60+ mins)
     validations:
       required: true
-  - type: markdown
-    id: taskList
+  - type: dropdown
+    id: targetCompletion
     attributes:
-      value: |
-        ---
-        💡 **Tip:** To link sub-tasks to this issue, use a tasklist block:
-        ```
-        ```tasklist
-        - [ ] organization-name/repo#issue_number
-        ```
-        ```
+      label: Target Completion Date
+      options:
+        - None
+        - Meet 1
+        - Meet 2
+        - Meet 3
+        - Qualifier
+        - State
+        - Worlds
+        - Premere Event
     validations:
-      required: false
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the feature.
+    validations:
+      required: true
