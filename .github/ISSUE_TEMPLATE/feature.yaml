@@ -31,9 +31,8 @@ body:
     validations:
       required: true
   - type: markdown
-    id: instructions
+    id: taskList
     attributes:
-      label: Instructions/Tasklist
       value: |
         ---
         💡 **Tip:** To link sub-tasks to this issue, use a tasklist block:
