@@ -1,0 +1,46 @@
+name: Feature
+description: Track new features and improvements related to the project.
+title: "[FEATURE]: "
+labels: ["feature", "triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the feature.
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low (Minor improvement, not urgent)
+        - Medium (Important but not urgent)
+        - High (Critically important and urgent)
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options:
+        - Small (5 - 30 mins)
+        - Medium (30 - 60 mins)
+        - Large (60+ mins)
+    validations:
+      required: true
+  - type: markdown
+    id: instructions
+    attributes:
+      label: Instructions/Tasklist
+      value: |
+        ---
+        💡 **Tip:** To link sub-tasks to this issue, use a tasklist block:
+        ```
+        ```tasklist
+        - [ ] organization-name/repo#issue_number
+        ```
+        ```
+    validations:
+      required: false
