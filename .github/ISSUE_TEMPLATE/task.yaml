@@ -28,7 +28,7 @@ body:
     attributes:
       label: Target Completion Date
       options:
-        - None
+        - No target
         - Meet 1
         - Meet 2
         - Meet 3
